@@ -34,6 +34,13 @@ This repository provides instructions on how to use the `bluenviron/mediamtx` Do
     ffmpeg -re -stream_loop -1 -i ~/video.mp4 -c copy -f rtsp rtsp://localhost:8554/mystream
     ```
 
+    ```bash
+    ffmpeg -re -stream_loop -1 -i "/home/vikas/kunal/Shah Rukh Khan & Amir Khan talk about their wonderful interaction with PM Modi.mp4" -f lavfi -i anullsrc=r=44100:cl=stereo -c:v copy -c:a aac -b:a 128k -shortest -rtsp_transport tcp -f rtsp rtsp://mentioned the ip/mystream
+
+    ```
+
+    
+
 ## Documentation
 
 For more detailed documentation, please refer to the [MediaMTX GitHub page](https://github.com/bluenviron/mediamtx?tab=readme-ov-file#ffmpeg).
